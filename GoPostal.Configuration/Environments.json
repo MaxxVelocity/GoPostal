@@ -1,0 +1,7 @@
+﻿{
+  {
+    "name": "localNoPort",
+    "description": "Localhost with no port number",
+    "baseUrl": "http://localhost"
+  }
+}

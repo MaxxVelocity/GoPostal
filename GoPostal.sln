@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoPostal", "GoPostal\GoPostal.csproj", "{339B189C-5C5B-4320-A575-D3846CEB4337}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoPostal.Configuration", "GoPostal.Configuration\GoPostal.Configuration.csproj", "{BA0FEE52-0FAB-4426-A40C-626D7083CD10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoPostal.Json", "GoPostal.Json\GoPostal.Json.csproj", "{CE34B262-5A0E-45A2-BDB5-8E1320193AF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6D35C791-02C3-4504-979E-C13FA868B2F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoPostal.Json.Tests", "GoPostal.Json.Tests\GoPostal.Json.Tests.csproj", "{D3A9E43E-B897-43EF-981F-CBC8828FD643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoPostal.Configuration.Tests", "GoPostal.Configuration.Tests\GoPostal.Configuration.Tests.csproj", "{49D2DD57-6357-413B-9F8D-F6829AE2E774}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{339B189C-5C5B-4320-A575-D3846CEB4337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{339B189C-5C5B-4320-A575-D3846CEB4337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{339B189C-5C5B-4320-A575-D3846CEB4337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{339B189C-5C5B-4320-A575-D3846CEB4337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA0FEE52-0FAB-4426-A40C-626D7083CD10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA0FEE52-0FAB-4426-A40C-626D7083CD10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA0FEE52-0FAB-4426-A40C-626D7083CD10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA0FEE52-0FAB-4426-A40C-626D7083CD10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE34B262-5A0E-45A2-BDB5-8E1320193AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE34B262-5A0E-45A2-BDB5-8E1320193AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE34B262-5A0E-45A2-BDB5-8E1320193AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE34B262-5A0E-45A2-BDB5-8E1320193AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3A9E43E-B897-43EF-981F-CBC8828FD643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A9E43E-B897-43EF-981F-CBC8828FD643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3A9E43E-B897-43EF-981F-CBC8828FD643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A9E43E-B897-43EF-981F-CBC8828FD643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D2DD57-6357-413B-9F8D-F6829AE2E774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D2DD57-6357-413B-9F8D-F6829AE2E774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D2DD57-6357-413B-9F8D-F6829AE2E774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D2DD57-6357-413B-9F8D-F6829AE2E774}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D3A9E43E-B897-43EF-981F-CBC8828FD643} = {6D35C791-02C3-4504-979E-C13FA868B2F7}
+		{49D2DD57-6357-413B-9F8D-F6829AE2E774} = {6D35C791-02C3-4504-979E-C13FA868B2F7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2795B4CD-D61F-4736-B6E0-313CDEF45474}
+	EndGlobalSection
+EndGlobal
