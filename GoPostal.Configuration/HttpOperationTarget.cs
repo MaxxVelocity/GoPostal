@@ -6,14 +6,12 @@ using System.Net.Http.Headers;
 
 namespace GoPostal.Configuration
 {
-    public class WebOperationDefinition
+    public class HttpOperationTarget
     {
         public Uri Url { get; }
 
         public HttpMethod Method { get; }
 
         public Dictionary<string,string> HeaderTemplates { get; }
-
-        public string BodyTemplate { get; }
     }
 }
