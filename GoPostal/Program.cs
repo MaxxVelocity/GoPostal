@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace GoPostal
 {
@@ -6,11 +7,26 @@ namespace GoPostal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Configuring Dependencies...");
 
-            var app = new App();
+            // create service collection
+            var serviceCollection = new ServiceCollection();
+            ConfigureServices(serviceCollection);
+
+            // create service provider
+            var serviceProvider = serviceCollection.BuildServiceProvider();
+
+            // entry to run app
+            serviceProvider.GetService<App>().Run();
 
             Console.WriteLine("GoPostal application terminating...");
+        }
+
+        static void ConfigureServices(IServiceCollection serviceCollection)
+        {
+            serviceCollection.AddTransient<IHttpClientService, HttpClientService>();
+
+            serviceCollection.AddTransient<App>();
         }
     }
 }

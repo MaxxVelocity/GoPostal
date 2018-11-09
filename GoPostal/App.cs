@@ -1,16 +1,31 @@
 ﻿namespace GoPostal
 {
+    using System;
     using System.Net;
 
     public class App
     {
-        private WebClient client;
+        private IHttpClientService client;
 
-        public App()
+        public App(IHttpClientService httpClient)
         {
-            this.client = new WebClient();
+            this.client = httpClient;
         }
 
+        public async void Run()
+        {
+            Console.WriteLine("Press any key to get Google.com.");
+            
+            Console.ReadKey();
+            
+            var x = await client.Get("http://www.Google.com");
 
+            Console.WriteLine($"Status Code: {x.StatusCode}");
+            Console.WriteLine($"Content Byte Count: {x.Content.Length}");
+
+            Console.WriteLine("Press any key to exit.");
+         
+            Console.ReadKey();
+        }
     }
 }

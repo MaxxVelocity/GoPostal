@@ -5,7 +5,7 @@ namespace GoPostal
 {
     using System.Net.Http;
 
-    public class HttpClientService
+    public class HttpClientService : IHttpClientService
     {
         // This class need not be explicitly disposed of, despite implementing IDisposable
         // https://stackoverflow.com/questions/15705092/do-httpclient-and-httpclienthandler-have-to-be-disposed
@@ -44,7 +44,7 @@ namespace GoPostal
                     responseContent = await content.ReadAsStringAsync();
                 }
 
-                return HttpOperationResult.Success(response.StatusCode, responseContent);
+                return HttpOperationResult.Success(response.StatusCode, responseContent, response.Headers);
             }
             catch (Exception ex)
             {

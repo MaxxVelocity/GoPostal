@@ -26,9 +26,9 @@ namespace GoPostal
         {
         }
 
-        public static HttpOperationResult Success(HttpStatusCode statusCode, string content)
+        public static HttpOperationResult Success(HttpStatusCode statusCode, string content, HttpResponseHeaders headers)
         {
-            var instance = new HttpOperationResult(true, string.Empty, statusCode, null, content);
+            var instance = new HttpOperationResult(true, string.Empty, statusCode, headers, content);
 
             return instance;
         }
