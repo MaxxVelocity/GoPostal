@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Mono.Options;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 
 namespace GoPostal
@@ -17,7 +18,7 @@ namespace GoPostal
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
             // entry to run app
-            serviceProvider.GetService<App>().Run();
+            serviceProvider.GetService<App>().Run(args);
 
             Console.WriteLine("GoPostal application terminating...");
         }

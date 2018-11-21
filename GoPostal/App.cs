@@ -12,17 +12,22 @@
             this.client = httpClient;
         }
 
-        public async void Run()
+        public async void Run(string[] args)
         {
-            Console.WriteLine("Press any key to get Google.com.");
-            
-            Console.ReadKey();
-            
-            var x = await client.Get("http://www.Google.com");
+            CommandLineFlags.Parse(args);
 
-            Console.WriteLine($"Status Code: {x.StatusCode}");
-            Console.WriteLine($"Content Byte Count: {x.Content.Length}");
+            if(CommandLineFlags.Enabled(CommandLineFlags.Flag.GoogleTest))
+            {
+                Console.WriteLine("GETing Google.com...");
 
+                var x = await client.Get("http://www.Google.com");
+
+                Console.WriteLine($"Status Code: {x.StatusCode}");
+                Console.WriteLine($"Content Byte Count: {x.Content.Length}");
+            }
+
+
+            
             Console.WriteLine("Press any key to exit.");
          
             Console.ReadKey();
