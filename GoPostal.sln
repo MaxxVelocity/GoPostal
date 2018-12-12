@@ -13,9 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6D35C791
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoPostal.Json.Tests", "GoPostal.Json.Tests\GoPostal.Json.Tests.csproj", "{D3A9E43E-B897-43EF-981F-CBC8828FD643}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoPostal.Configuration.Tests", "GoPostal.Configuration.Tests\GoPostal.Configuration.Tests.csproj", "{49D2DD57-6357-413B-9F8D-F6829AE2E774}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoPostal.UnitTests", "GoPostal.UnitTests\GoPostal.UnitTests.csproj", "{91A70E2B-5B45-458A-825C-728FDA71D8B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoPostal.UnitTests", "GoPostal.UnitTests\GoPostal.UnitTests.csproj", "{91A70E2B-5B45-458A-825C-728FDA71D8B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +37,6 @@ Global
 		{D3A9E43E-B897-43EF-981F-CBC8828FD643}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3A9E43E-B897-43EF-981F-CBC8828FD643}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3A9E43E-B897-43EF-981F-CBC8828FD643}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49D2DD57-6357-413B-9F8D-F6829AE2E774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49D2DD57-6357-413B-9F8D-F6829AE2E774}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49D2DD57-6357-413B-9F8D-F6829AE2E774}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49D2DD57-6357-413B-9F8D-F6829AE2E774}.Release|Any CPU.Build.0 = Release|Any CPU
 		{91A70E2B-5B45-458A-825C-728FDA71D8B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{91A70E2B-5B45-458A-825C-728FDA71D8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91A70E2B-5B45-458A-825C-728FDA71D8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,7 +47,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D3A9E43E-B897-43EF-981F-CBC8828FD643} = {6D35C791-02C3-4504-979E-C13FA868B2F7}
-		{49D2DD57-6357-413B-9F8D-F6829AE2E774} = {6D35C791-02C3-4504-979E-C13FA868B2F7}
 		{91A70E2B-5B45-458A-825C-728FDA71D8B6} = {6D35C791-02C3-4504-979E-C13FA868B2F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

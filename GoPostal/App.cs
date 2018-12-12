@@ -1,5 +1,6 @@
 ﻿namespace GoPostal
 {
+    using GoPostal.CommandLine;
     using System;
     using System.Net;
 
@@ -14,9 +15,11 @@
 
         public async void Run(string[] args)
         {
-            CommandLineFlags.Parse(args);
+            Flags.Parse(args);
 
-            if(CommandLineFlags.Enabled(CommandLineFlags.Flag.GoogleTest))
+            string content = null;
+
+            if(Flag.GoogleTest.IsEnabled())
             {
                 Console.WriteLine("GETing Google.com...");
 
@@ -24,9 +27,19 @@
 
                 Console.WriteLine($"Status Code: {x.StatusCode}");
                 Console.WriteLine($"Content Byte Count: {x.Content.Length}");
+
+                content = x.Content;
             }
 
+            if (Flag.DisplayResponseBody.IsEnabled())
+            {
+                Console.WriteLine(content ?? "No content in response");
+            }
 
+            if (Flag.SaveResponseBodyToFile.IsEnabled())
+            {
+
+            }
             
             Console.WriteLine("Press any key to exit.");
          

@@ -8,6 +8,7 @@ namespace GoPostal.Configuration.Tests
     [TestClass]
     public class UnitTest1
     {
+        [Ignore]
         [TestMethod]
         public void ValidateUrl()
         {
