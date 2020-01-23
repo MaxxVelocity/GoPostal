@@ -1,5 +1,6 @@
 using System;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -13,6 +14,19 @@ namespace GoPostal.UnitTests
             var client = new HttpClientService();
 
             var response = await client.Get("http://www.google.com");
+
+            Assert.NotNull(response);
+            Assert.True(response.Succeeded);
+            Assert.False(string.IsNullOrEmpty(response.Content));
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        }
+
+        [Fact]
+        public async void CanGetGoogleHomepageViaSendAsync()
+        {
+            var client = new HttpClientService();
+
+            var response = await client.Invoke( "http://www.google.com", HttpMethod.Get);
 
             Assert.NotNull(response);
             Assert.True(response.Succeeded);

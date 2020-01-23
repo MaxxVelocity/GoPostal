@@ -33,7 +33,7 @@ namespace GoPostal.CommandLine
             { "g|get", Verb.Get },
             { "d|delete", Verb.Delete },
             { "p|post", Verb.Post },
-            { "u|put", Verb.Put },
+            { "t|put", Verb.Put },
         };
     }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
 using Xunit;
 
@@ -10,15 +11,17 @@ namespace GoPostal.UnitTests
         [Fact]
         public void NoBleeding()
         {
-            CommandLine.VerbOptionX.Initialize(new string[] { "-get", "-noise" });
+            //CommandLine.VerbOptionX.Initialize(new string[] { "-get", "-ggl" });
 
-            Assert.True(CommandLine.VerbOptionX.Selected == CommandLine.Verb.Get);
+            CommandLine.VerbOptionX.Initialize(new string[] { "-get", "-oo" });
 
-            CommandLine.VerbOptionY.Initialize(new string[] { "-put", "-noise" });
+            Assert.True(CommandLine.VerbOptionX.Selected == HttpMethod.Get);
 
-            Assert.True(CommandLine.VerbOptionY.Selected == CommandLine.Verb.Put);
+            //CommandLine.VerbOptionY.Initialize(new string[] { "-put", "-ggl" });
 
-            Assert.True(CommandLine.VerbOptionX.Selected == CommandLine.Verb.Get);
+            //Assert.True(CommandLine.VerbOptionY.Selected == HttpMethod.Put);
+
+            Assert.True(CommandLine.VerbOptionX.Selected == HttpMethod.Get);
         }
 
         [Fact]

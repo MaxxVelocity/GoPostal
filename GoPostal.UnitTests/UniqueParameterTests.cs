@@ -10,7 +10,7 @@ namespace GoPostal.UnitTests
         [Fact]
         public void CanParseUrl()
         {
-            CommandLine.Url.Initialize(new string[] { "-url:HiMom" });
+            CommandLine.Url.Initialize(new string[] { "-Url:HiMom" });
 
             Assert.Equal("HiMom", CommandLine.Url.Value);
         }
@@ -18,9 +18,11 @@ namespace GoPostal.UnitTests
         [Fact]
         public void CanParseContentTypeHeader()
         {
-            CommandLine.HeaderContentType.Initialize(new string[] { "-ct:SomeContentType" });
+            var contentTypeValue = "SomeContentType";
 
-            Assert.Equal("SomeContentType", CommandLine.HeaderContentType.Value);
+            CommandLine.HeaderContentType.Initialize(new string[] { $"-ct:{contentTypeValue}" });
+
+            Assert.Equal(contentTypeValue, CommandLine.HeaderContentType.Value);
         }
     }
 }

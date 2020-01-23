@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "GoPostal": {
+      "commandName": "Project",
+      "commandLineArgs": "-g -Url:http://www.google.com",
+      "environmentVariables": {
+        "Key": "Value"
+      }
+    }
+  }
+}

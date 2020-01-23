@@ -11,7 +11,7 @@ namespace GoPostal.UnitTests
         [Fact]
         public void FlagsAreParsed()
         {
-            CommandLine.Flags.Parse(new string[] { "-ggl" });
+            CommandLine.Flags.Parse(new string[] { "-test" });
 
             Assert.True(Flag.GoogleTest.IsEnabled());
         }

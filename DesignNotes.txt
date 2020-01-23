@@ -1,0 +1,4 @@
+There's a bug in the Options framework that treats all command line parameters starting with the same letter as being the same things
+if there's a single-letter alias for any of them. 
+
+This collision symptom does not appear when it's an uppper/lower case mismatch (IE: it's case sensitive).

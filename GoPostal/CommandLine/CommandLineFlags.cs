@@ -30,7 +30,7 @@ namespace GoPostal.CommandLine
 
         private static Dictionary<string, Flag> parameterDictionary = new Dictionary<string, Flag>
         {
-            { "ggl|google", Flag.GoogleTest },
+            { "test", Flag.GoogleTest },
             { "d|displaybody", Flag.DisplayResponseBody },
             { "s|save", Flag.SaveResponseBodyToFile }
         };
